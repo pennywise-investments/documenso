@@ -1,4 +1,10 @@
 {
+  "outputDirectory": "build/client",
+  "functions": {
+    "api/[...slug].js": {
+      "runtime": "@vercel/node@3.0.7"
+    }
+  },
   "rewrites": [
     {
       "source": "/(.*)",
