@@ -1,0 +1,18 @@
+{
+  "functions": {
+    "build/server/main.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/build/server/main.js"
+    }
+  ],
+  "outputDirectory": "build/client"
+}
