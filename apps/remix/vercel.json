@@ -1,18 +1,8 @@
 {
-  "functions": {
-    "build/server/main.js": {
-      "runtime": "@vercel/node@5.3.10"
-    }
-  },
-  "routes": [
+  "rewrites": [
     {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/build/server/main.js"
+      "source": "/(.*)",
+      "destination": "/api/[...slug]"
     }
-  ],
-  "outputDirectory": "build/client"
+  ]
 }
